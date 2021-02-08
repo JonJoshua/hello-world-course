@@ -1,0 +1,19 @@
+title: hello-world
+description: >-
+  This is my first GitHub repository. The Hello World exercise is the
+  traditional "First Project" for all developers. I will be using this platform
+  to learn about idea collaboration, development, deployment and change control.
+template:
+  repo: hello-world-template
+  name: hello-world
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
